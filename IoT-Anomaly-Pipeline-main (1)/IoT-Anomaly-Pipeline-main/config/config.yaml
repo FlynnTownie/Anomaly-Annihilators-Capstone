@@ -1,0 +1,33 @@
+pi:
+  lan_interface: wlan0
+  wan_interface: eth0
+  device_id: iot-pi-01
+
+capture:
+  bpf: "tcp or udp"
+  flow_timeout_sec: 60
+  emit_interval_sec: 5
+
+features:
+  schema_path: "config/feature_schema.json"
+
+model:
+  mode: local
+  local_model_path: "isolation_forest.joblib"     # you already have this
+  api_url: "http://127.0.0.1:8000/infer"
+
+severity:
+  high_threshold: 0.80
+  medium_threshold: 0.60
+  low_threshold: 0.40
+  require_periodic_for_high: true
+
+sinks:
+  - type: file
+    path: "/var/log/iot-c2/events.jsonl"
+  # - type: elastic
+  #   url: "http://<ES_HOST>:9200"
+  #   index: "iot-c2-events"
+
+logging:
+  level: INFO

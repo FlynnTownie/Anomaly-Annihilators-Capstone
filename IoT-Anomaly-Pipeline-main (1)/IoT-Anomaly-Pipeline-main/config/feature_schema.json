@@ -1,0 +1,19 @@
+{
+    "order": [
+      "duration",
+      "orig_bytes",
+      "resp_bytes",
+      "pkts",
+      "proto_TCP",
+      "proto_UDP"
+    ],
+    "dtypes": {
+      "duration": "float",
+      "orig_bytes": "int",
+      "resp_bytes": "int",
+      "pkts": "int",
+      "proto_TCP": "int",
+      "proto_UDP": "int"
+    }
+  }
+  

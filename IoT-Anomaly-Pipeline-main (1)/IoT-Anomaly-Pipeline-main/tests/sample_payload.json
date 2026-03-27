@@ -1,0 +1,8 @@
+{
+  "duration": 0.5,
+  "orig_bytes": 120,
+  "resp_bytes": 900,
+  "pkts": 20,
+  "proto_TCP": 1,
+  "proto_UDP": 0
+}
